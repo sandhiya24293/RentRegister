@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="lang="fr"">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rentmatics Register Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Kaushan+Script'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'>
+<link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Register Your Home</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a id="login" class="nav-link btn btn-primary btn-lg text-uppercase js-scroll-trigger" class="conn" href="#services">Owner Register <i class="fa fa-lock"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">
+              Tenant Register 
+            </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">
+              Insert Rentspace 
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container content">
+  <div class="row">
+    <div class="card card-login mx-auto mt-5 col-md-6">
+      <div class="card-header">Insert Your Rentspace</div>
+      <div class="card-body">
+       <form class="col s8 row1 blue-grey lighten-5" action="http://localhost:8083/GetImage" method="POST" enctype="multipart/form-data"  name="myform" >
+          <div class="form-group">
+            <div class="form-label-group">
+              <label>House Owner Name :</label>
+              <input type="text"  class="form-control"  name="housename" placeholder="Owner Name" required="required" autofocus="autofocus">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label >ExecutiveID :</label>
+              <input type="text" name="executiveid" class="form-control" placeholder="ExecutiveID" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label >OwnerID :</label>
+              <input type="text" name="ownerid" class="form-control" placeholder="OwnerID" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label >House Name :</label>
+              <input type="text" name=houseownername class="form-control" placeholder="House Name " required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label >Address1 :</label>
+              <input type="text" name="address1"  class="form-control" placeholder="Address1" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label >Address2 :</label>
+              <input type="text" name="address2"  class="form-control" placeholder="Address2" required="required">
+            </div>
+          </div>
+            <div class="form-group">
+            <div class="form-label-group">
+              <label >City :</label>
+              <select name="city"  class="custom-select" required>
+                    <option value="Sarjapur Road">Sarjapur Road</option>
+                    <option value="Whitefield">Whitefield</option>
+                    <option value="Bannerghatta Road">Bannerghatta Road</option>
+                    <option value="Electronic City">Electronic City</option>
+                    <option value="HSR Layout">HSR Layout</option>
+                    <option value="Jayanagar">Jayanagar</option>
+                    <option value="JP Nagar">JP Nagar</option>
+                    <option value="Hosur Road">Hosur Road</option>
+               </select>
+              </div>
+             </div>
+
+             <div class="form-group">
+               <div class="form-label-group">
+              <label for="departement">District :</label>
+              <select select name="district" required class="custom-select">
+                                  
+                  <option value="Bangalore"> Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                </select>
+               </div>
+              </div>
+
+            <div class="form-group">
+            <div class="form-label-group">
+              <label >State :</label>
+              <select name="state" required class="custom-select">
+                                 <option value="TamilNadu">TamilNadu</option>
+                                  <option value="Karnataka">Karnataka</option>
+                                 </select>
+               </div>
+              </div>
+
+
+
+            <div class="form-group">
+            <div class="form-label-group">
+              <label for="departement">Country :</label>
+              <select name="country" required class="custom-select">
+                                  <option value="" disabled selected>country</option>
+                                   <option value="India">India</option>
+                                </select>
+                </div>
+             </div>
+
+              <div class="form-group">
+            <div class="form-label-group">
+              <label >Pin :</label>
+              <input type="number" name="pin" class="form-control" placeholder="Pin" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Phonenumber :</label>
+              <input type="number" name="phonenumber" class="form-control" pattern="^(0|[1-9][0-9]*)$" placeholder="Phonenumber" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Email :</label>
+              <input type="text" name="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" class="form-control" placeholder="Email" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Security Deposit :</label>
+              <input type="text" name="securitydeposit" pattern="^(0|[1-9][0-9]*)$" class="form-control" placeholder="Security Deposit" required="required">
+            </div>
+          </div>
+            <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Monthly Rent :</label>
+              <input type="text" name="monthlyrent"  pattern="^(0|[1-9][0-9]*)$" class="form-control" placeholder="Monthly Rent" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Bed Rent :</label>
+              <input type="text" name="bedrent" class="form-control" pattern="^(0|[1-9][0-9]*)$" placeholder="Bed Rent " required="required">
+            </div>
+          </div>
+            <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">BHK Rent :</label>
+              <input type="text" name="bhkrent" class="form-control" placeholder="Bhk Rent" pattern="^(0|[1-9][0-9]*)$" required="required">
+            </div>
+          </div>
+
+            <div class="form-group">
+            <div class="form-label-group">
+              <label >Bed :</label>
+              <select name="bed" required class="custom-select">
+                                    <option value="1"> 1 Bed</option>
+                                    <option value="2"> 2 Bed</option>
+                                    <option value="3"> 3 Bed</option>
+                                    <option value="4"> 4 Bed</option>
+                                    <option value="5"> 5 Bed</option>
+                                    <option value="6"> 6 Bed</option>
+                                </select>
+                </div>
+             </div>
+
+            <div class="form-group">
+            <div class="form-label-group">
+              <label>Bhk :</label>
+              <select name="bed" required class="custom-select">
+                 <option value="1"> 1 BHK</option>
+                  <option value="2"> 2 BHK</option>
+                  <option value="3"> 3 BHK</option>
+                  <option value="4"> 4 BHK</option>
+                  <option value="5"> 5 BHK</option>
+                  <option value="6"> 6 BHK</option>
+                                 
+                                </select>
+                </div>
+             </div>
+
+
+            <div class="form-group">
+            <div class="form-label-group">
+              <label >Available Bed :</label>
+              <input type="text" name="availbed" class="form-control" placeholder="Available Bed" required="required">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-group">
+              <label >Available BHK :</label>
+              <input type="text" name="availbhk" class="form-control" placeholder="Available BHK" required="required">
+            </div>
+          </div>
+        
+            <div class="form-group">
+            <div class="form-label-group">
+              <label >Booked Bed :</label>
+              <input type="text" name="bookbed" class="form-control" placeholder="Email" required="required">
+            </div>
+          </div>
+
+             <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Booked Bhk :</label>
+              <input type="text" name="bookbhk" class="form-control" placeholder="Email" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label for="departement">Furnished Type :</label>
+              <selectname="furnishtype" required class="custom-select">
+                                   <option value="Fully Furnished">Fully Furnished</option>
+                    <option value="Semi Furnished">Semi Furnished</option>
+                    <option value="Unfurnished">UnFurnished</option>
+                                </select>
+                </div>
+             </div>
+
+
+        <div class="form-group">
+            <div class="form-label-group">
+              <label for="departement">Tenant Type :</label>
+              <select name="tenant" required class="custom-select">
+                                         
+                    <option value="Girls">Girls</option>
+                    <option value="Boys">Boys</option>
+                    <option value="Family">Family</option>
+                                </select>
+                </div>
+             </div>
+
+        <div class="form-group">
+            <div class="form-label-group">
+              <label >Booking Type :</label>
+              <select  name ="booking" required class="custom-select">
+                                    <option value="Shared Room">Shared Room</option>
+                    <option value="Private Room">Private Room</option>
+                    <option value="Entire House">Entire House</option>
+                                </select>
+                </div>
+             </div>
+
+        <div class="form-group">
+            <div class="form-label-group">
+              <label >House Type :</label>
+              <select name="housetype" required class="custom-select">  
+
+               <option value="Apartment">Apartment</option>
+                    <option value="Independent House">Independent House</option>
+                    <option value="Villa">Villa</option>
+                                </select>
+                </div>
+             </div>
+
+
+
+         <div class="form-group">
+            <div class="form-label-group">
+              <label>Distance  :</label>
+              <input type="text"  name="distance" class="form-control" placeholder="Km" required="required">
+            </div>
+          </div>
+              <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Lalitude  :</label>
+              <input type="text" name="lalitude" class="form-control" placeholder="Lalitude" required="required">
+            </div>
+          </div>
+
+    <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Longitude  :</label>
+              <input type="text" name="sqft"  name="longitude" class="form-control" placeholder="Longitude" required="required">
+            </div>
+          </div>
+
+
+      <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">SquareFeet  :</label>
+              <input type="text" name="sqft"  class="form-control" placeholder="SquareFeet" required="required">
+            </div>
+          </div>
+
+      <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Total  Floors  :</label>
+              <input type="text" name="tnf"  class="form-control" placeholder="Longitude" required="required">
+            </div>
+          </div>
+
+             <div class="form-group">
+            <div class="form-label-group">
+              <label for="departement">Facing  : :</label>
+              <select name ="facing" required  class="custom-select">
+                                         
+                       <option value="East">East</option>
+                    <option value="West">West</option>
+                    <option value="North">North</option>
+                    <option value="South">South</option>
+                                </select>
+                </div>
+             </div>
+
+         <div class="form-group">
+            <div class="form-label-group">
+              <label for="departement">Facing  : :</label>
+              <select name ="parking"  required  class="custom-select">
+                                         
+                         <option value="Yes">Yes</option>
+                         <option value="No">No</option>
+                                </select>
+                </div>
+             </div>
+
+
+          <div class="form-group">
+             <label for="departement">Amenties  : :</label>
+            <div class="checkbox">
+              <label> <input type="checkbox" name="groupamen" value="remember-me"> Sofa </label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Wifi</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Television</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Dish</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Washing Machine</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Western Toilet</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Solar Heater</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Geyser</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Fridge</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> LPG Gas Stove</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Crockery Set</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Wardrobes</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Lift</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Swimming Pool</label>
+              <label><input type="checkbox" name="groupamen" value="remember-me"> Gym</label>
+
+              </div>
+          </div>
+
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Listing  :</label>
+              <textarea  type="text"  name="listing" class="form-control" placeholder="Listing" required="required"></textarea>
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">Description  :</label>
+              <textarea  type="text" name="description" class="form-control" placeholder="Description" required="required"></textarea>
+            </div>
+          </div>
+       
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage1  :</label>
+              <input type="file" name="uploadfile0" class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+           <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage2  :</label>
+              <input type="file" name="uploadfile1" class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+
+        <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage3  :</label>
+              <input type="file" name="uploadfile2"class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+
+        <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage4 :</label>
+              <input type="file" name="uploadfile3" class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage5  :</label>
+              <input type="file" name="uploadfile4" class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <label for="inputEmail">UploadImage6  :</label>
+              <input type="file" name="uploadfile5" class="form-control" placeholder="Description" required="required">
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+         <br>
+         <br>
+         <button class="btn btn-primary" type="submit">Submit form</button>
+          <!-- <a class="btn btn-primary btn-block" href="index.html">Login</a> -->
+        </form>
+     
+      </div>
+    </div>
+  </div>
+  
+
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
